@@ -1,0 +1,96 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+# 注意 Kinect v2原始分辨率为1080p，使用540p分辨率时，请将1080p分辨率下的相机内参÷2
+# 960*540
+#Camera.fx: 517.81
+#Camera.fy: 518.32
+#Camera.cx: 464.636
+#Camera.cy: 262.121
+
+# 480*270
+Camera.fx: 258.905
+Camera.fy: 259.16
+Camera.cx: 232.318
+Camera.cy: 131.0605
+
+# 640*360
+#Camera.fx: 345.207
+#Camera.fy: 345.547
+#Camera.cx: 309.757
+#Camera.cy: 174.747
+
+# 640*480
+#Camera.fx: 366.766
+#Camera.fy: 366.766
+#Camera.cx: 255.912
+#Camera.cy: 210.206
+
+#Camera.k1: 6.0613879580807217e-02
+#Camera.k2: -1.4239109049821155e-01
+#Camera.p1: -5.2220432507920555e-03
+#Camera.p2: -1.9702324541114201e-03
+#Camera.k3: 7.2152463246044463e-02
+
+Camera.width: 640
+Camera.height: 360
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# IR projector baseline times fx (aprox.)
+Camera.bf: 40.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 0
+
+# Close/Far threshold. Baseline times.
+ThDepth: 40.0
+
+# Deptmap values factor 
+DepthMapFactor: 1000
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize:2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+
+PointCloudMapping.Resolution: 0.01
+
+# kinect image topic
+rgb_topic: /kinect2/qhd/image_color_rect
+depth_topic: /kinect2/qhd/image_depth_rect
+

@@ -1,0 +1,2 @@
+#roslaunch kinect2_bridge kinect2_bridge.launch &
+./RGBD ../../../Vocabulary/ORBvoc.bin kinect2_121717234447.yaml
