@@ -27,6 +27,7 @@
 *.out
 *.app
 
-build*
+build
+cmake-build-*
 *.pcd
 *.kdev4

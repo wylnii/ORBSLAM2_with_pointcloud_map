@@ -1,4 +1,4 @@
-##FIXBUG
+## CHANGES
 1.修改ORB_SLAM2源码，更改图片及点云地图显示为彩色，增加自动保存result.pcd
 
 2.**FIX** 运行结束卡死bug
@@ -9,7 +9,7 @@
 
 5.**ADD** 点云地图PassThrough滤波，去除远处不准确的点
 
-##NOTE
+## NOTE
 1.编译前需运行：
 ```bash
 	export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/your/path/ORBSLAM2_with_pointcloud_map/ORB_SLAM2_modified/Examples/ROS
@@ -27,7 +27,7 @@ tools/bin_vocabulary
 rostopic pub /RGBD/cmd std_msgs/String "data: 'stop'"
 ```
 
-##How To Build
+## How To Build
 
 1. ```export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/your/path/ORBSLAM2_with_pointcloud_map/ORB_SLAM2_modified/Examples/ROS```
 
@@ -37,7 +37,7 @@ rostopic pub /RGBD/cmd std_msgs/String "data: 'stop'"
  
 4. ```make -j4```
 
-##How To Run
+## How To Run
 
 1. ```rosbag play -r 1.0 *.bag```
   或使用Kinect
